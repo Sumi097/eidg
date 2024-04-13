@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background-image: url(../image/FOFU_20200321_RCW_0037.jpg); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+}
+section{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% ,-50%);
+    animation: floating 5s linear infinite;
+    animation-direction: alternate;
+}
+section h1{
+    font-size: 145px;
+    font-family: "Tangerine", cursive;
+    font-weight: 700;
+    font-style: normal;
+    color: #fff;
+    text-transform: capitalize;
+    text-shadow: -12px 5px 0px #040404;
+}
+section h1::before{
+    content: '';
+    left: -113px;
+    top: -159px;
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    border-left: 15px solid#fff;
+    background: transparent;
+    border-radius: 115px;
+    transform: rotate(-33deg);
+}
+@keyframes floating{
+    0%{
+        left: 49%;
+    }
+    25%{
+        top: 49%;
+    }
+    75%{
+        left: 51%;
+    }
+     100%{
+         top: 51%;
+     }
+}
+.mosque{
+    background-image: url(../image/mosque.png);
+    min-height: 200px;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: 469px;
+    position: absolute;
+    left: 0;
+    bottom: -43px;
+    width: 100%;
+    animation: anim 25s linear infinite;
+}
+.mosque::before{
+    content: '';
+    background-image: url(../image/mosque.png);
+    min-height: 400px;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: 681px;
+    position: absolute;
+    left: 0;
+    bottom: -58px;
+    width: 100%;
+    animation: anim 25s linear infinite;
+    animation-direction: reverse;
+    opacity: .6;
+}
+@keyframes anim {
+0%{
+    background-position: -100px;
+}
+100%{
+    background-position: 1600px;
+}
+}
+.particles-js-canvas-el{
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-height: 60vh;
+}
